@@ -1,0 +1,21 @@
+1) Add plugin to your project.
+
+2) include dateSettingsChecker.js file in html file
+
+<script type="text/javascript" src="dateSettingsChecker.js"></script>
+
+3) to check network mode is selected. add this to any of your javascript..
+
+ function checkDateSettings()
+ {
+	 dateSettingsChecker.checkDateSettings(function (result){
+
+         alert(JSON.stringify(result));
+         // You will get the response as follows.
+         // {"isNetworkModeSelected" : "true/false"}
+         
+		 // do something here...
+	});
+ }
+
+4) call checkDateSettings for any event.
